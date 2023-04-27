@@ -1,3 +1,3 @@
-# Next.js_Template
+# Client
 
-Next.js template for those who want to start fast
+Client Repository for Eu-Capstone
