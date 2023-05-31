@@ -1,16 +1,13 @@
 import styled from "styled-components";
-import Footer from "~/@components/organisms/Footer";
-import Header from "~/@components/organisms/Header";
 import { LayoutProp } from "~/@interfaces";
 
 export const Applayout = ({ children }: LayoutProp) => {
-  return (
-    <ApplayoutContainer>
-      <Header />
-      {children}
-      <Footer />
-    </ApplayoutContainer>
-  );
+  return <ApplayoutContainer>{children}</ApplayoutContainer>;
 };
 
-const ApplayoutContainer = styled.main``;
+const ApplayoutContainer = styled.div`
+  margin: 0 auto;
+  max-width: 390px;
+  min-width: 390px;
+  height: 100vh;
+`;

@@ -20,7 +20,7 @@ ${commonStyle}
 }
 
 body {
-    font-family: 'Heir of Light'
+    font-family: 'Heir of Light';
 }
 `;
 export default GlobalStyle;

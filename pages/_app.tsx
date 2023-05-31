@@ -6,10 +6,12 @@ import GlobalStyle from "~/@styles/GlobalStyle";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Applayout>
+    <>
       <DefaultSeo {...DefaultSeoInfo} />
       <GlobalStyle />
-      <Component {...pageProps} />
-    </Applayout>
+      <Applayout>
+        <Component {...pageProps} />
+      </Applayout>
+    </>
   );
 }

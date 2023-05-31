@@ -9,7 +9,7 @@ export const Flex = ({
   align = "center",
   gap = 0,
   width = "100%",
-  height = "auto",
+  height = "100%",
   wrap = "no-wrap",
 }: FlexProps) => {
   return (
