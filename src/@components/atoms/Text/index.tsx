@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import { StyleProps, TextProps } from "~/@interfaces";
 
+export type FontWeight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | "normal" | "bold" | "bolder" | "lighter";
+
 export const Text = ({
-  size = 1,
+  size = 10,
   weight = 400,
   color = "Black",
   spacing = 0,
-  font = "Pretendard",
+  font = "Heir of Light",
   height = 120,
   cursor = "auto",
   background,
