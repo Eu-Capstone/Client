@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { Flex } from "~/@components/atoms";
-import { Footer, Header } from "~/@components/molecules";
+import { Flex, Space } from "~/@components/atoms";
+import { ActionButton, Footer, Header, TestTakerCount } from "~/@components/molecules";
 
 export const Main = () => {
+  const count = 111111; /* 받아와야 하는 값 */
+
   return (
     <>
       <Background>
@@ -12,6 +14,10 @@ export const Main = () => {
           <ImageContainer>
             <Image src="/logo.svg" alt="main logo" width={277} height={277} />
           </ImageContainer>
+          <Space margin="280px 0px 0px 0px" />
+          <TestTakerCount count={count} />
+          <Space margin="40px 0px 0px 0px" />
+          <ActionButton full={true} />
           <Footer />
         </Flex>
       </Background>
