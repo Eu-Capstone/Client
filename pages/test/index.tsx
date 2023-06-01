@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Space } from "~/@components/atoms";
 import { StatusBar } from "~/@components/molecules";
+import { Question } from "~/@components/organisms";
 
 const Test = () => {
-  const [curIdx, setCurIdx] = useState(0);
-  const [curType, setCurType] = useState({
+  const [index, setIndex] = useState(1);
+  const [type, setType] = useState({
     I: 0,
     E: 0,
     F: 0,
@@ -12,11 +14,12 @@ const Test = () => {
     J: 0,
   });
 
-  const [status, setStatus] = useState("5%");
-
   return (
     <>
-      <StatusBar stateWidth={status} />
+      <Space margin="21px 0px 0px 0px" />
+      <StatusBar index={index} />
+      <Space margin="25px 0px 0px 0px" />
+      <Question index={index} />
     </>
   );
 };

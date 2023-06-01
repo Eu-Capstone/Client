@@ -1,27 +1,27 @@
-import Image from "next/image";
+import { ReactNode } from "react";
 import styled from "styled-components";
 
-export const OptionButton = ({ top, bottom }: { top?: boolean; bottom?: boolean }) => {
+export const OptionButton = ({ top, bottom, children }: { top?: boolean; bottom?: boolean; children: ReactNode }) => {
   return (
     <>
       {top && (
         <>
-          <ButtonTop>
-            <Image src="/button-ans-top.svg" alt="option button top" width={358} height={101}></Image>
-          </ButtonTop>
+          <ButtonTop>{children}</ButtonTop>
         </>
       )}
       {bottom && (
         <>
-          <ButtonBottom>
-            <Image src="/button-ans-bottom.svg" alt="option button top" width={358} height={101} />
-          </ButtonBottom>
+          <ButtonBottom>{children}</ButtonBottom>
         </>
       )}
     </>
   );
 };
 
-const ButtonTop = styled.div``;
+const ButtonTop = styled.div`
+  background: url("button-ans-top.svg") no-repeat center;
+`;
 
-const ButtonBottom = styled.div``;
+const ButtonBottom = styled.div`
+  background: url("button-ans-bottom.svg") no-repeat center;
+`;

@@ -4,26 +4,18 @@ import { Flex, Space } from "~/@components/atoms";
 export const StatusBar = ({ index }: { index: number }) => {
   return (
     <>
-      <Space margin="21px 0px 0px 0px" />
-      <StyledDiv>
-        <StyledStateBar>
-          <Flex width="" justify="flex-start" align="center" direction="row">
-            <Space margin="1px 2px 0px 0px" />
-            <StyledState index={index} />
-          </Flex>
-        </StyledStateBar>
-      </StyledDiv>
+      <StyledStateBar>
+        <Flex width="" justify="flex-start" align="center" direction="row">
+          <Space margin="1px 2px 0px 0px" />
+          <StyledState index={index} />
+        </Flex>
+      </StyledStateBar>
     </>
   );
 };
 
-const StyledDiv = styled.div`
-  width: 80%;
-  margin-bottom: 50px;
-`;
-
 const StyledStateBar = styled.div`
-  width: 350px;
+  width: 80%;
   height: 16px;
   border: 2px solid rgba(174, 174, 174, 0.8);
   border-radius: 10px;
