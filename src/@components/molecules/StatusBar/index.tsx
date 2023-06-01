@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Flex, Space } from "~/@components/atoms";
 
-export const StatusBar = ({ stateWidth }: { stateWidth: string }) => {
+export const StatusBar = ({ index }: { index: number }) => {
   return (
     <>
       <Space margin="21px 0px 0px 0px" />
@@ -9,7 +9,7 @@ export const StatusBar = ({ stateWidth }: { stateWidth: string }) => {
         <StyledStateBar>
           <Flex width="" justify="flex-start" align="center" direction="row">
             <Space margin="1px 2px 0px 0px" />
-            <StyledState stateWidth={stateWidth} />
+            <StyledState index={index} />
           </Flex>
         </StyledStateBar>
       </StyledDiv>
@@ -30,9 +30,9 @@ const StyledStateBar = styled.div`
   background-color: white;
 `;
 
-const StyledState = styled.div<{ stateWidth: string }>`
+const StyledState = styled.div<{ index: number }>`
   border-radius: 10px;
-  width: ${({ stateWidth }) => stateWidth};
+  width: ${({ index }) => index / 9}%;
   height: 9px;
   background-color: black;
   transition: 0.3s;
