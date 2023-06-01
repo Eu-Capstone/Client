@@ -1,26 +1,58 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import styled, { keyframes } from "styled-components";
 import { Flex, Space, Text } from "~/@components/atoms";
 import { OptionButton, QuestionCount, QuestionText } from "~/@components/molecules";
 import { questions } from "~/@utils/data";
 import { indexState } from "~/@utils/states/index/index";
-import { typeState } from "~/@utils/states/type/index";
 
 export const Question = () => {
   const router = useRouter();
   const [index, setIndex] = useRecoilState(indexState);
-  const [type, setType] = useRecoilState(typeState);
 
-  const updateStates = () => {
+  type MbtiTypes = {
+    I: number;
+    E: number;
+    F: number;
+    T: number;
+    P: number;
+    J: number;
+  };
+
+  const [mbtiType, setMbtiType] = useState<MbtiTypes>({
+    I: 0,
+    E: 0,
+    F: 0,
+    T: 0,
+    P: 0,
+    J: 0,
+  });
+
+  const updateStates = (alphabet: keyof MbtiTypes) => {
     setIndex(index + 1);
-    setType(type + `${questions[index - 1].answers[0].label}`);
+
+    setMbtiType({
+      ...mbtiType,
+      [alphabet]: mbtiType[alphabet] + 1,
+    });
   };
 
   useEffect(() => {
     if (index === 10) {
+      let mbti = "";
+      {
+        mbtiType.I >= 2 ? (mbti += "I") : (mbti += "E");
+      }
+      {
+        mbtiType.F >= 2 ? (mbti += "F") : (mbti += "T");
+      }
+      {
+        mbtiType.P >= 2 ? (mbti += "P") : (mbti += "J");
+      }
+      localStorage.setItem("type", mbti);
+
       const timer = setTimeout(() => {
         router.push("/result");
       }, 3000);
@@ -44,10 +76,10 @@ export const Question = () => {
             <QuestionText text={questions[index - 1].question} />
             <Space margin="19px 0px 0px 0px" />
             <Image src={`question-${index}.svg`} alt="question illustration" width={302} height={317} />
-            <OptionButton top onClick={() => updateStates()}>
+            <OptionButton top onClick={() => updateStates(questions[index - 1].answers[0].label as keyof MbtiTypes)}>
               <Text text={questions[index - 1].answers[0].answer} size={14} spacing={-0.3} />
             </OptionButton>
-            <OptionButton bottom onClick={() => updateStates()}>
+            <OptionButton bottom onClick={() => updateStates(questions[index - 1].answers[1].label as keyof MbtiTypes)}>
               <Text text={questions[index - 1].answers[1].answer} size={14} spacing={-0.3} />
             </OptionButton>
           </Flex>
