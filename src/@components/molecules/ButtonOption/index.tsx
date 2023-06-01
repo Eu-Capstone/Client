@@ -1,6 +1,6 @@
 import { ReactEventHandler, ReactNode } from "react";
 import styled from "styled-components";
-import { Space } from "~/@components/atoms";
+import { Flex, Space } from "~/@components/atoms";
 
 export const OptionButton = ({
   top,
@@ -17,13 +17,22 @@ export const OptionButton = ({
     <>
       {top && (
         <>
-          <ButtonTop onClick={onClick}>{children}</ButtonTop>
+          <ButtonTop onClick={onClick}>
+            <Flex direction="column" justify="flex-end" align="center" height="85%">
+              {children}
+            </Flex>
+          </ButtonTop>
           <Space margin="19px 0px 0px 0px" />
         </>
       )}
       {bottom && (
         <>
-          <ButtonBottom onClick={onClick}>{children}</ButtonBottom>
+          <ButtonBottom onClick={onClick}>
+            <Flex direction="column" justify="flex-start" align="center">
+              <Space margin="15px 0px 0px 0px" />
+              {children}
+            </Flex>
+          </ButtonBottom>
           <Space margin="19px 0px 0px 0px" />
         </>
       )}
