@@ -1,10 +1,23 @@
+import axios from "axios";
 import Image from "next/image";
+import { useState } from "react";
 import styled from "styled-components";
 import { Flex, Space } from "~/@components/atoms";
 import { ActionButton, Footer, Header, TestTakerCount } from "~/@components/molecules";
 
 export const Main = () => {
-  const count = 111111; /* 받아와야 하는 값 */
+  const [count, setCount] = useState(0);
+
+  axios
+    .get(`${process.env.NEXT_PUBLIC_API_URL}/api/mbti/count`)
+    .then((response) => {
+      if (response.status === 200) {
+        setCount(response.data.userCount);
+      }
+    })
+    .catch((error) => {
+      console.log(error.request.response);
+    });
 
   return (
     <>
