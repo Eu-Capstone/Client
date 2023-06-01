@@ -1,19 +1,11 @@
-import { useState } from "react";
+import { useRecoilState } from "recoil";
 import { Space } from "~/@components/atoms";
 import { StatusBar } from "~/@components/molecules";
 import { Question } from "~/@components/organisms";
+import { indexState } from "~/@utils/states/index/index";
 
 const Test = () => {
-  const [index, setIndex] = useState(1);
-  const [type, setType] = useState({
-    I: 0,
-    E: 0,
-    F: 0,
-    T: 0,
-    P: 0,
-    J: 0,
-  });
-
+  const [index, setIndex] = useRecoilState(indexState);
   return (
     <>
       <Space margin="21px 0px 0px 0px" />
