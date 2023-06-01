@@ -13,7 +13,7 @@ export const Text = ({
   cursor = "auto",
   background,
   gradient = false,
-  align = "start",
+  align = "center",
   text,
   ...rest
 }: TextProps) => {
@@ -44,6 +44,7 @@ const StyledText = styled.span<StyleProps>`
   text-align: ${({ align }) => align};
   cursor: ${({ cursor }) => cursor};
   background: ${({ background }) => background};
+  white-space: pre;
   ${({ gradient }) =>
     gradient
       ? `-webkit-background-clip: text;

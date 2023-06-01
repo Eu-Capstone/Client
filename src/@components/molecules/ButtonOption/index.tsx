@@ -1,17 +1,27 @@
-import { ReactNode } from "react";
+import { ReactEventHandler, ReactNode } from "react";
 import styled from "styled-components";
 
-export const OptionButton = ({ top, bottom, children }: { top?: boolean; bottom?: boolean; children: ReactNode }) => {
+export const OptionButton = ({
+  top,
+  bottom,
+  children,
+  onClick,
+}: {
+  top?: boolean;
+  bottom?: boolean;
+  children: ReactNode;
+  onClick: ReactEventHandler;
+}) => {
   return (
     <>
       {top && (
         <>
-          <ButtonTop>{children}</ButtonTop>
+          <ButtonTop onClick={onClick}>{children}</ButtonTop>
         </>
       )}
       {bottom && (
         <>
-          <ButtonBottom>{children}</ButtonBottom>
+          <ButtonBottom onClick={onClick}>{children}</ButtonBottom>
         </>
       )}
     </>

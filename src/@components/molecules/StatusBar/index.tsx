@@ -1,7 +1,11 @@
+import { useRecoilState } from "recoil";
 import styled from "styled-components";
 import { Flex, Space } from "~/@components/atoms";
+import { indexState } from "~/@utils/states/index/index";
 
-export const StatusBar = ({ index }: { index: number }) => {
+export const StatusBar = () => {
+  const [index, setIndex] = useRecoilState(indexState);
+
   return (
     <>
       <StyledStateBar>
