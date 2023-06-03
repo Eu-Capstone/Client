@@ -21,7 +21,7 @@ const DefaultSeoInfo: DefaultSeoProps = {
   openGraph: {
     type: "website",
     site_name: "신BTI",
-    images: [{ url: "https://client-2-2j01dqr8f-wooseok123.vercel.app/logo.svg" }],
+    images: [{ url: "https://client-2-liard.vercel.app/logo.svg" }],
   },
 };
 
