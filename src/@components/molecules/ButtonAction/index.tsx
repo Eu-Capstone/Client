@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import { Flex, Space, Text } from "~/@components/atoms";
@@ -18,11 +17,56 @@ export const ActionButton = ({
     <>
       {top && (
         <>
-          <Image src="/button-final-top.svg" alt="option button top" width={358} height={101}></Image>
+          <Link
+            href="/share"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <ButtonTop>
+              <Flex>
+                <Space margin="12px 0px 0px 0px" />
+                <Text text="결과 공유하기" size={16} spacing={-0.3} cursor="pointer" />
+              </Flex>
+            </ButtonTop>
+          </Link>
         </>
       )}
-      {center && <></>}
-      {bottom && <></>}
+      {center && (
+        <>
+          <Link
+            href="/"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <ButtonCenter>
+              <Flex>
+                <Text text="테스트 다시하기" size={16} spacing={-0.3} cursor="pointer" />
+                <Space margin="13px 0px 0px 0px" />
+              </Flex>
+            </ButtonCenter>
+          </Link>
+        </>
+      )}
+      {bottom && (
+        <>
+          <Link
+            href="/stats"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <ButtonBottom>
+              <Flex>
+                <Text text="전체 결과 보기" size={16} spacing={-0.3} cursor="pointer" />
+                <Space margin="13px 0px 0px 0px" />
+              </Flex>
+            </ButtonBottom>
+          </Link>
+        </>
+      )}
+
       {full && (
         <>
           <Link
@@ -44,7 +88,26 @@ export const ActionButton = ({
   );
 };
 
-const ButtonBottom = styled.div``;
+const ButtonTop = styled.div`
+  width: 313px;
+  height: 79px;
+  cursor: pointer;
+  background: url("/button-final-top.svg") no-repeat center;
+`;
+
+const ButtonCenter = styled.div`
+  width: 313px;
+  height: 66px;
+  cursor: pointer;
+  background: url("/button-final-center.svg") no-repeat center;
+`;
+
+const ButtonBottom = styled.div`
+  width: 313px;
+  height: 79px;
+  cursor: pointer;
+  background: url("/button-final-bottom.svg") no-repeat center;
+`;
 
 const ButtonFull = styled.div`
   width: 358px;

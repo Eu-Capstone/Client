@@ -47,7 +47,6 @@ const InnerContainer = styled.div`
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid red;
   word-break: keep-all;
   word-wrap: break-word;
 `;

@@ -5,6 +5,7 @@ export * from "./Header";
 export * from "./QuestionCount";
 export * from "./QuestionHeader";
 export * from "./QuestionText";
+export * from "./RelationType";
 export * from "./ResultTag";
 export * from "./ResultTitle";
 export * from "./StatusBar";
