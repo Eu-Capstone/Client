@@ -13,8 +13,10 @@ declare global {
 }
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    if (!window.Kakao.isInitialized()) {
-      window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API);
+    if (window.Kakao) {
+      if (!window.Kakao.isInitialized()) {
+        window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API);
+      }
     }
   }, []);
   return (
