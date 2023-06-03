@@ -17,9 +17,9 @@ const Test = () => {
       <Flex height="" justify="center">
         {index < 10 && (
           <>
-            <Space margin="21px 0px 0px 0px" />
+            <Space margin="18px 0px 0px 0px" />
             <StatusBar />
-            <Space margin="25px 0px 0px 0px" />
+            <Space margin="10px 0px 0px 0px" />
           </>
         )}
         <Question />

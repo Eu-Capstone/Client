@@ -24,6 +24,7 @@ export const Main = () => {
       <Background>
         <Flex direction="column" justify="space-between">
           <Header />
+          <Space margin="100px 0px 0px 0px" />
           <ImageContainer>
             <Image src="/logo.svg" alt="main logo" width={277} height={277} />
           </ImageContainer>
@@ -41,8 +42,7 @@ export const Main = () => {
 const Background = styled.div`
   background: url("/background-yggdrasil.svg") no-repeat 50% 90%/80%;
   width: 100%;
-  height: 100%;
-  border: 2px solid red;
+  height: 100vh;
   position: relative;
 `;
 

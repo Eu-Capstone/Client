@@ -1,5 +1,7 @@
+import { OuterDiv } from "pages";
 import { useEffect, useState } from "react";
-import { ResultHeader } from "~/@components/organisms";
+import { Footer, Header } from "~/@components/molecules";
+import { ResultButton, ResultHeader, ResultRelation, ResultText } from "~/@components/organisms";
 
 const Result = () => {
   const [type, setType] = useState<any>();
@@ -14,9 +16,14 @@ const Result = () => {
   }
 
   return (
-    <>
+    <OuterDiv>
+      <Header />
       <ResultHeader type={type} />
-    </>
+      <ResultText type={type} />
+      <ResultRelation type={type} />
+      <ResultButton />
+      <Footer />
+    </OuterDiv>
   );
 };
 

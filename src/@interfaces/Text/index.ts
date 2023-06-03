@@ -2,7 +2,7 @@ import { HTMLAttributes } from "react";
 
 export type FontWeight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | "normal" | "bold" | "bolder" | "lighter";
 
-export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
+export interface TextProps extends HTMLAttributes<HTMLDivElement> {
   as?: "span" | "strong" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   size?: number;
   weight?: FontWeight;
@@ -14,9 +14,10 @@ export interface TextProps extends HTMLAttributes<HTMLSpanElement> {
   background?: string;
   gradient?: boolean;
   align?: string;
+  limit?: boolean;
 }
 
 export type StyleProps = Pick<
   TextProps,
-  "align" | "size" | "weight" | "color" | "spacing" | "font" | "height" | "cursor" | "background" | "gradient"
+  "align" | "size" | "weight" | "color" | "spacing" | "font" | "height" | "cursor" | "background" | "gradient" | "limit"
 >;

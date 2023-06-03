@@ -15,6 +15,7 @@ export const Text = ({
   gradient = false,
   align = "center",
   text,
+  limit = false,
   ...rest
 }: TextProps) => {
   return (
@@ -27,6 +28,7 @@ export const Text = ({
       height={height}
       cursor={cursor}
       align={align}
+      limit={limit}
       {...rest}
     >
       {text}
@@ -34,7 +36,8 @@ export const Text = ({
   );
 };
 
-const StyledText = styled.span<StyleProps>`
+const StyledText = styled.div<StyleProps>`
+  ${({ limit }) => (limit ? `white-space: pre-line;` : `white-space: pre;`)};
   font-size: ${({ size }) => size}px;
   font-weight: ${({ weight }) => weight};
   color: ${({ color }) => color};
@@ -44,7 +47,6 @@ const StyledText = styled.span<StyleProps>`
   text-align: ${({ align }) => align};
   cursor: ${({ cursor }) => cursor};
   background: ${({ background }) => background};
-  white-space: pre;
   ${({ gradient }) =>
     gradient
       ? `-webkit-background-clip: text;

@@ -70,12 +70,13 @@ export const Question = () => {
         <>
           <Flex height="">
             <QuestionCount index={index} />
-            <Space margin="19px 0px 0px 0px" />
+            <Space margin="5px 0px 0px 0px" />
             <Image src="question-deco.svg" alt="question decoration" width={349} height={36} />
-            <Space margin="19px 0px 0px 0px" />
+            <Space margin="5px 0px 0px 0px" />
             <QuestionText text={questions[index - 1].question} />
-            <Space margin="19px 0px 0px 0px" />
-            <Image src={`question-${index}.svg`} alt="question illustration" width={302} height={317} />
+            <Space margin="10px 0px 0px 0px" />
+            <Image src={`question-${index}.svg`} alt="question illustration" width={275} height={288} />
+            <Space margin="10px 0px 0px 0px" />
             <OptionButton top onClick={() => updateStates(questions[index - 1].answers[0].label as keyof MbtiTypes)}>
               <Text text={questions[index - 1].answers[0].answer} size={14} spacing={-0.3} />
             </OptionButton>

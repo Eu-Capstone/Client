@@ -18,7 +18,7 @@ export const OptionButton = ({
       {top && (
         <>
           <ButtonTop onClick={onClick}>
-            <Flex direction="column" justify="flex-end" align="center" height="85%">
+            <Flex direction="column" justify="flex-end" align="center" height="87%">
               {children}
             </Flex>
           </ButtonTop>
@@ -29,7 +29,7 @@ export const OptionButton = ({
         <>
           <ButtonBottom onClick={onClick}>
             <Flex direction="column" justify="flex-start" align="center">
-              <Space margin="15px 0px 0px 0px" />
+              <Space margin="12px 0px 0px 0px" />
               {children}
             </Flex>
           </ButtonBottom>
@@ -41,13 +41,13 @@ export const OptionButton = ({
 };
 
 const ButtonTop = styled.div`
-  width: 358px;
-  height: 101px;
-  background: url("button-ans-top.svg") no-repeat center;
+  width: 320px;
+  height: 90px;
+  background: url("button-ans-top.svg") no-repeat center/101%;
 `;
 
 const ButtonBottom = styled.div`
-  width: 358px;
-  height: 101px;
-  background: url("button-ans-bottom.svg") no-repeat center;
+  width: 320px;
+  height: 90px;
+  background: url("button-ans-bottom.svg") no-repeat center/101%;
 `;
