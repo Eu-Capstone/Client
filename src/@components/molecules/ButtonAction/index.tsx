@@ -19,6 +19,7 @@ export const ActionButton = ({
 }) => {
   const share = () => {
     if (type) {
+      console.log(`${process.env.NEXT_PUBLIC_BASE_URL}/result-${types[type].id}.svg`);
       window.Kakao.Share.sendDefault({
         objectType: "feed",
         content: {
