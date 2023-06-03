@@ -26,7 +26,7 @@ export const ActionButton = ({
           description: types[type].main,
           imageWidth: 300,
           imageHeight: 400,
-          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/result-${types[type].id}.svg`,
+          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`,
           link: {
             mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
             webUrl: process.env.NEXT_PUBLIC_BASE_URL,
