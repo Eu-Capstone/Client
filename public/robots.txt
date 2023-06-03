@@ -2,8 +2,6 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://example.com
 
 # Sitemaps
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://client-2-2j01dqr8f-wooseok123.vercel.app/sitemap.xml

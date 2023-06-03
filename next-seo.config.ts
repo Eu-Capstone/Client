@@ -1,7 +1,7 @@
 import { DefaultSeoProps } from "next-seo";
 
 const DefaultSeoInfo: DefaultSeoProps = {
-  titleTemplate: "%s | Example",
+  titleTemplate: "신BTI | Example",
   additionalLinkTags: [
     {
       rel: "icon",
@@ -20,8 +20,8 @@ const DefaultSeoInfo: DefaultSeoProps = {
   ],
   openGraph: {
     type: "website",
-    site_name: "Example",
-    images: [{ url: "https://example.com/example_square_image.png" }],
+    site_name: "신BTI",
+    images: [{ url: "https://client-2-2j01dqr8f-wooseok123.vercel.app/logo.svg" }],
   },
 };
 

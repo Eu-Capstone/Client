@@ -39,18 +39,18 @@ export const ActionButton = ({
         content: {
           title: `당신은 ${types[type].name}, ${types[type].subtitle}`,
           description: types[type].main,
-          imageUrl: "http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/result-${types[type].id}.svg?image_width=300&image_height=400`,
           link: {
-            mobileWebUrl: "http://localhost:3000",
-            webUrl: "http://localhost:3000",
+            mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
+            webUrl: process.env.NEXT_PUBLIC_BASE_URL,
           },
         },
         buttons: [
           {
             title: "당신의 북유럽 신은?",
             link: {
-              mobileWebUrl: "http://localhost:3000",
-              webUrl: "http://localhost:3000",
+              mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
+              webUrl: process.env.NEXT_PUBLIC_BASE_URL,
             },
           },
         ],
