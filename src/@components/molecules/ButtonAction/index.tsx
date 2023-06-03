@@ -24,7 +24,7 @@ export const ActionButton = ({
         content: {
           title: `당신은 ${types[type].name}, ${types[type].subtitle}`,
           description: types[type].main,
-          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/result-${types[type].id}.svg?image_width=300&image_height=400`,
+          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/result-${types[type].id}.svg`,
           link: {
             mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
             webUrl: process.env.NEXT_PUBLIC_BASE_URL,
