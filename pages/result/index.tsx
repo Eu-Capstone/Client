@@ -4,16 +4,15 @@ import { Footer, Header } from "~/@components/molecules";
 import { ResultButton, ResultHeader, ResultRelation, ResultText } from "~/@components/organisms";
 
 const Result = () => {
-  const [type, setType] = useState<any>();
-  if (typeof window !== "undefined") {
-    const result: any = localStorage.getItem("type");
+  const [type, setType] = useState<any>("IFP");
 
-    useEffect(() => {
-      if (result) {
-        setType(result);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("type") !== null) {
+        setType(localStorage.getItem("type"));
       }
-    }, []);
-  }
+    }
+  }, []);
 
   return (
     <OuterDiv>

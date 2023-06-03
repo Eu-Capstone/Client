@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+
 import { Flex, Space, Text } from "~/@components/atoms";
+import { types } from "~/@utils";
 
 export const ActionButton = ({
   top,
@@ -13,23 +16,51 @@ export const ActionButton = ({
   bottom?: boolean;
   full?: boolean;
 }) => {
+  const [type, setType] = useState<keyof typeof types>("IFP");
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (localStorage.getItem("type") !== null) {
+        const value: keyof typeof types = localStorage.getItem("type") as keyof typeof types;
+        setType(value);
+      }
+    }
+  }, []);
+
+  const share = () => {
+    if (type) {
+      window.Kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: `당신은 ${types[type].name}, ${types[type].subtitle}`,
+          description: types[type].main,
+          imageUrl: "http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
+          link: {
+            mobileWebUrl: "http://localhost:3000",
+            webUrl: "http://localhost:3000",
+          },
+        },
+        buttons: [
+          {
+            title: "당신의 북유럽 신은?",
+            link: {
+              mobileWebUrl: "http://localhost:3000",
+              webUrl: "http://localhost:3000",
+            },
+          },
+        ],
+      });
+    }
+  };
   return (
     <>
       {top && (
         <>
-          <Link
-            href="/share"
-            style={{
-              textDecoration: "none",
-            }}
-          >
-            <ButtonTop>
-              <Flex>
-                <Space margin="12px 0px 0px 0px" />
-                <Text text="결과 공유하기" size={16} spacing={-0.3} cursor="pointer" />
-              </Flex>
-            </ButtonTop>
-          </Link>
+          <ButtonTop onClick={() => share()}>
+            <Flex>
+              <Space margin="12px 0px 0px 0px" />
+              <Text text="결과 공유하기" size={16} spacing={-0.3} cursor="pointer" />
+            </Flex>
+          </ButtonTop>
         </>
       )}
       {center && (
