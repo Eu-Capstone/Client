@@ -1,43 +1,22 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { Flex, Space, Text } from "~/@components/atoms";
 import { types } from "~/@utils";
 
-declare global {
-  interface Window {
-    Kakao: any;
-  }
-}
-
-export const ActionButton = ({
+const ActionButton = ({
   top,
   center,
   bottom,
   full,
+  type,
 }: {
   top?: boolean;
   center?: boolean;
   bottom?: boolean;
   full?: boolean;
+  type?: keyof typeof types;
 }) => {
-  const [type, setType] = useState<keyof typeof types>("IFP");
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (localStorage.getItem("type") !== null) {
-        const value: keyof typeof types = localStorage.getItem("type") as keyof typeof types;
-        setType(value);
-      }
-    }
-
-    if (window.Kakao) {
-      if (!window.Kakao.isInitialized()) {
-        window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API);
-      }
-    }
-  }, []);
-
   const share = () => {
     if (type) {
       window.Kakao.Share.sendDefault({
@@ -130,6 +109,8 @@ export const ActionButton = ({
     </>
   );
 };
+
+export default ActionButton;
 
 const ButtonTop = styled.div`
   width: 313px;

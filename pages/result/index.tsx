@@ -12,6 +12,12 @@ const Result = () => {
         setType(localStorage.getItem("type"));
       }
     }
+
+    if (window.Kakao) {
+      if (!window.Kakao.isInitialized()) {
+        window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_API);
+      }
+    }
   }, []);
 
   return (
@@ -20,7 +26,7 @@ const Result = () => {
       <ResultHeader type={type} />
       <ResultText type={type} />
       <ResultRelation type={type} />
-      <ResultButton />
+      <ResultButton type={type} />
       <Footer />
     </OuterDiv>
   );
