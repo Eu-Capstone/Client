@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Flex, Space, Text } from "~/@components/atoms";
 import { types } from "~/@utils";
 
-const ActionButton = ({
+export const ActionButton = ({
   top,
   center,
   bottom,
@@ -109,8 +109,6 @@ const ActionButton = ({
     </>
   );
 };
-
-export default ActionButton;
 
 const ButtonTop = styled.div`
   width: 313px;
