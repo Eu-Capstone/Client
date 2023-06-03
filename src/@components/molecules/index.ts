@@ -5,5 +5,7 @@ export * from "./Header";
 export * from "./QuestionCount";
 export * from "./QuestionHeader";
 export * from "./QuestionText";
+export * from "./ResultTag";
+export * from "./ResultTitle";
 export * from "./StatusBar";
 export * from "./TestTakerCount";
