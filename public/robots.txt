@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://client-2-2j01dqr8f-wooseok123.vercel.app/
+Host: https://client-2-liard.vercel.app
 
 # Sitemaps
-Sitemap: https://client-2-2j01dqr8f-wooseok123.vercel.app/sitemap.xml
+Sitemap: https://client-2-liard.vercel.app/sitemap.xml

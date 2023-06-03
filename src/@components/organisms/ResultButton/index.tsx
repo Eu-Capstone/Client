@@ -1,5 +1,5 @@
 import { Flex, Space } from "~/@components/atoms";
-import ActionButton from "~/@components/molecules/ButtonAction";
+import { ActionButton } from "~/@components/molecules";
 import { types } from "~/@utils";
 
 export const ResultButton = ({ type }: { type: keyof typeof types }) => {
