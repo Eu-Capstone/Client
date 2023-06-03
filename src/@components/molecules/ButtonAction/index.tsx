@@ -5,6 +5,12 @@ import styled from "styled-components";
 import { Flex, Space, Text } from "~/@components/atoms";
 import { types } from "~/@utils";
 
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
+
 export const ActionButton = ({
   top,
   center,
