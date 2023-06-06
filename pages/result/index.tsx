@@ -5,7 +5,7 @@ import { Footer, Header } from "~/@components/molecules";
 import { ResultButton, ResultHeader, ResultRelation, ResultText } from "~/@components/organisms";
 
 const Result = () => {
-  const [type, setType] = useState<any>("IFP");
+  const [type, setType] = useState<any>(undefined);
 
   const postResult = async (type: any) => {
     const data = {
@@ -42,10 +42,17 @@ const Result = () => {
   return (
     <OuterDiv>
       <Header />
-      <ResultHeader type={type} />
-      <ResultText type={type} />
-      <ResultRelation type={type} />
-      <ResultButton type={type} />
+
+      {type ? (
+        <>
+          <ResultHeader type={type} />
+          <ResultText type={type} />
+          <ResultRelation type={type} />
+          <ResultButton type={type} />
+        </>
+      ) : (
+        ""
+      )}
       <Footer />
     </OuterDiv>
   );
