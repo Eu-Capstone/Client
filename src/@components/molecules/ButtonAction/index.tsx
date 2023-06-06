@@ -32,7 +32,7 @@ export const ActionButton = ({
         },
         buttons: [
           {
-            title: "당신은 무슨 북유럽 신인가요?",
+            title: "당신의 북유럽 신은?",
             link: {
               mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
               webUrl: process.env.NEXT_PUBLIC_BASE_URL,
