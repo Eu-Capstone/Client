@@ -24,7 +24,7 @@ export const ActionButton = ({
         content: {
           title: `당신은 ${types[type].name}, ${types[type].subtitle}`,
           description: types[type].main,
-          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/result-${type}.png`,
+          imageUrl: `https://client-2-liard.vercel.app/result-${type}.jpg`,
           link: {
             mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
             webUrl: process.env.NEXT_PUBLIC_BASE_URL,
