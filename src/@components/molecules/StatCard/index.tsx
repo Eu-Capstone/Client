@@ -14,7 +14,7 @@ const StatCard = ({ idx, mbti, total }: { idx: any; mbti: any; total: any }) => 
   return (
     <Flex direction="row" justify="center" align="center" height="auto" gap={20}>
       <Text text={idx} size={28} />
-      <Image src={`/result-${content.id}.png`} width={100} height={150} alt="result" />
+      <Image src={`/result-${content.id}.jpg`} width={100} height={150} alt="result" />
       <Flex align="start" justify="start" gap={4}>
         <Text text={content.id} size={18} weight={600} />
         <Text text={content.subtitle} size={18} weight={400} />
