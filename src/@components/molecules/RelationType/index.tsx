@@ -10,7 +10,7 @@ export const RelationType = ({ type, relation }: { type: keyof typeof types; rel
       <Flex direction="column" justify="flex-start">
         <Text text={`${capitalizedString} with`} weight={700} size={14} spacing={-0.3} />
         <Space margin="11px 0px 0px 0px" />
-        <Image src={`/result-${types[relationship]?.id}.jpg`} alt={`${relation} god image`} width={144} height={210} />
+        <Image src={`/result-${types[relationship]?.id}.jpg`} alt={`${relation} god image`} width={144} height={162} />
         <Space margin="11px 0px 0px 0px" />
         <Text text={`${types[relationship]?.subtitle}`} size={14} color="#6B6B6B" spacing={-0.3} />
         <Text text={`${types[relationship]?.name}`} size={14} weight={700} spacing={-0.3} />
