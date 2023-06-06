@@ -28,8 +28,8 @@ const StyledStateBar = styled.div`
 
 const StyledState = styled.div<{ index: number }>`
   border-radius: 10px;
-  width: ${({ index }) => index / 9}%;
-  height: 9px;
+  width: ${({ index }) => (index / 9) * 99}%;
+  height: 8px;
   background-color: black;
   transition: 0.3s;
 `;

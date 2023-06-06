@@ -64,6 +64,8 @@ export const Question = () => {
     }
   }, [index]);
 
+  console.log(mbtiType);
+
   return (
     <>
       {index < 10 ? (
@@ -78,10 +80,10 @@ export const Question = () => {
             <Image src={`question-${index}.svg`} alt="question illustration" width={275} height={288} />
             <Space margin="10px 0px 0px 0px" />
             <OptionButton top onClick={() => updateStates(questions[index - 1].answers[0].label as keyof MbtiTypes)}>
-              <Text text={questions[index - 1].answers[0].answer} size={14} spacing={-0.3} />
+              <Text cursor="pointer" text={questions[index - 1].answers[0].answer} size={14} spacing={-0.3} />
             </OptionButton>
             <OptionButton bottom onClick={() => updateStates(questions[index - 1].answers[1].label as keyof MbtiTypes)}>
-              <Text text={questions[index - 1].answers[1].answer} size={14} spacing={-0.3} />
+              <Text cursor="pointer" text={questions[index - 1].answers[1].answer} size={14} spacing={-0.3} />
             </OptionButton>
           </Flex>
         </>

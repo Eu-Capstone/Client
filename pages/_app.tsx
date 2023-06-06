@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { RecoilRoot } from "recoil";
 import { Applayout } from "~/@components/templates/Applayout";
 import GlobalStyle from "~/@styles/GlobalStyle";
+import "@styles/font.css";
 
 declare global {
   interface Window {

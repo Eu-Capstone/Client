@@ -24,9 +24,7 @@ export const ActionButton = ({
         content: {
           title: `당신은 ${types[type].name}, ${types[type].subtitle}`,
           description: types[type].main,
-          imageWidth: 300,
-          imageHeight: 400,
-          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/logo.svg`,
+          imageUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/result-${type}.png`,
           link: {
             mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
             webUrl: process.env.NEXT_PUBLIC_BASE_URL,
@@ -34,7 +32,7 @@ export const ActionButton = ({
         },
         buttons: [
           {
-            title: "당신의 북유럽 신은?",
+            title: "당신은 무슨 북유럽 신인가요?",
             link: {
               mobileWebUrl: process.env.NEXT_PUBLIC_BASE_URL,
               webUrl: process.env.NEXT_PUBLIC_BASE_URL,

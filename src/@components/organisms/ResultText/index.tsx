@@ -6,7 +6,6 @@ import { types } from "~/@utils";
 export const ResultText = ({ type }: { type: keyof typeof types }) => {
   return (
     <>
-      <Space margin="20px 0px 0px 0px" />
       <MainGradient>
         <Flex justify="center" align="center">
           <Text text={`“${types[type]?.main}”`} weight={700} size={14} spacing={-0.3} />

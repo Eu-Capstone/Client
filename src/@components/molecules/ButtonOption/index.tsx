@@ -44,12 +44,10 @@ const ButtonTop = styled.div`
   width: 320px;
   height: 90px;
   background: url("button-ans-top.svg") no-repeat center/101%;
-  cursor: pointer;
 `;
 
 const ButtonBottom = styled.div`
   width: 320px;
   height: 90px;
   background: url("button-ans-bottom.svg") no-repeat center/101%;
-  cursor: pointer;
 `;

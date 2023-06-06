@@ -10,12 +10,12 @@ export const Main = () => {
 
   axios
     .get(`${process.env.NEXT_PUBLIC_API_URL}/api/mbti/count`)
-    .then((response) => {
+    .then((response: any) => {
       if (response.status === 200) {
         setCount(response.data.userCount);
       }
     })
-    .catch((error) => {
+    .catch((error: any) => {
       console.log(error.request.response);
     });
 
@@ -26,7 +26,7 @@ export const Main = () => {
           <Header />
           <Space margin="100px 0px 0px 0px" />
           <ImageContainer>
-            <Image src="/logo.svg" alt="main logo" width={277} height={277} />
+            <Image src="/logo.png" alt="main logo" width={277} height={277} />
           </ImageContainer>
           <Space margin="280px 0px 0px 0px" />
           <TestTakerCount count={count} />

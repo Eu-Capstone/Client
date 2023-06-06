@@ -18,7 +18,8 @@ export const ResultRelation = ({ type }: { type: keyof typeof types }) => {
 };
 
 const RelationDiv = styled.div`
-  height: 290px;
+  height: 300px;
+  margin-top: 40px;
   background: linear-gradient(
     180deg,
     rgba(217, 217, 217, 0) 0%,

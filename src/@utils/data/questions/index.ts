@@ -123,7 +123,7 @@ export const questions = [
       },
       {
         id: "8-2",
-        answer: "슬픈 일이 있나봐.\n우선 달래줘야겠다.. 😭",
+        answer: "슬픈 일이 있나봐.\n우선 달래줘야겠다.. ",
         label: "F",
       },
     ],
