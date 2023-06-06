@@ -19,7 +19,7 @@ const Stats = () => {
       .then((res) => {
         const { mbtis, userCount } = res.data;
 
-        const sortedMbtis = mbtis.sort((a, b) => {
+        const sortedMbtis = mbtis.sort((a: any, b: any) => {
           return b.count - a.count;
         });
 
