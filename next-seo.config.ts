@@ -14,9 +14,9 @@ const DefaultSeoInfo: DefaultSeoProps = {
   openGraph: {
     type: "website",
     site_name: "신BTI",
-    url: "카카오톡, 페이스북에 링크 넣으면 연결되는 url",
-    title: "카카오톡, 페이스북에 링크 넣으면 올라올 타이틀",
-    images: [{ url: "https://client-2-2j01dqr8f-wooseok123.vercel.app/logo.png", alt: "logo" }],
+    url: "https://client-2-2j01dqr8f-wooseok123.vercel.app/",
+    title: "신BTI, 당신의 북유럽 신은?",
+    images: [{ url: "https://client-2-2j01dqr8f-wooseok123.vercel.app/kakao_share.png", alt: "logo" }],
   },
 };
 
