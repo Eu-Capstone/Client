@@ -9,7 +9,7 @@ export const Footer = () => {
         <Flex height="auto">
           <div style={{ position: "relative" }}>
             <div style={{ position: "absolute", transform: "translateX(-50%) translateY(-50%)", bottom: "5px" }}>
-              <Text text={`Copyright(c) 2003 by 아이넷(I-net) `} />
+              <Text text={`Copyright(c) 2023 by 아이넷(I-net) `} />
             </div>
           </div>
           <Space margin="20px 0px 0px 0px" />
