@@ -10,7 +10,7 @@ export const ResultHeader = ({ type }: { type: keyof typeof types }) => {
       <Flex height="">
         <ResultTitle name={`${types[type]?.name}`} subtitle={types[type]?.subtitle} />
         {/* <Image src={`${types[type]?.id}.svg`} alt="god image" width={314} height={355} /> */}
-        <Image src={`/result-${god}.png`} alt="god image" width={300} height={337.5} />
+        <Image src={`/result-${god}.jpg`} alt="god image" width={300} height={337.5} />
       </Flex>
     </>
   );
