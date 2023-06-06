@@ -42,7 +42,6 @@ const Result = () => {
   return (
     <OuterDiv>
       <Header />
-
       {type ? (
         <>
           <ResultHeader type={type} />
