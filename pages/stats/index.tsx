@@ -29,7 +29,7 @@ const Stats = () => {
       <Image src={"/stats_downFrame.svg"} width={392} height={100} alt="top" />
       <Text color="black" size={24} text={"유형 순위"} />
       <StatContainer>
-        <div style={{ position: "relative", width: "100%", height: "100%" }}>
+        <div style={{ position: "relative", width: "80%", height: "100%" }}>
           {mbtiData ? mbtiData.map((el, idx) => <StatCard idx={idx + 1} mbti={el} key={idx} total={totalCount} />) : ""}
         </div>
       </StatContainer>
@@ -63,7 +63,7 @@ const ButtonCenter = styled.div`
 `;
 
 const StatContainer = styled.div`
-  width: 100%;
+  width: 80%;
   height: 400px;
   margin-left: 50px;
   overflow-y: scroll;
